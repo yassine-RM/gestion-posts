@@ -32,7 +32,7 @@ if (
 ?>
 <div class="row">
     <div class="col-md-8 offset-md-2 my-5">
-        <h3 class=" text-center  py-2"><i class="fa fa-plus"></i> Register</h3>
+        <h3 class=" text-center  py-2"><i class="fa fa-user"></i> Register</h3>
         <?php if (isset($error)) {
         ?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
