@@ -25,6 +25,7 @@ class DB
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             self::$cnx = $pdo;
         }
+        var_dump("==> ",self::$cnx);
         return self::$cnx;
     }
 }
