@@ -112,6 +112,6 @@ else {
                 <?php } ?>
             </tbody>
         </table>
-                            <?php } else echo "<div class='text-center'><img src='/gestion-posts/assets/img/noresult.png' width='400px'/></div>"?>
+                            <?php } else echo "<div class='text-center'><img src='/assets/img/noresult.png' width='400px'/></div>"?>
     </div>
 </div>
