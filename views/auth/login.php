@@ -23,7 +23,7 @@ if (
 ?>
 <div class="row">
     <div class="col-md-6 offset-md-3 my-5">
-    <h3 class=" text-center bg-secondary py-2"><i class="fa fa-user"></i> Login</h3>
+    <h3 class=" text-center  py-2"><i class="fa fa-user"></i> Login</h3>
         <?php if (isset($error)) {
         ?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
