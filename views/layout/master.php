@@ -1,7 +1,7 @@
 <?php
 use Middleware\isAuthenticated;
 isAuthenticated::isAuth();
-define("root", $_SERVER['DOCUMENT_ROOT'] . "/");
+define("root", $_SERVER['DOCUMENT_ROOT']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

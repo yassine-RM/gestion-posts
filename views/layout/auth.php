@@ -2,7 +2,7 @@
 /**
  * define root varible 
  */
-define("root", $_SERVER['DOCUMENT_ROOT'] . "/");
+define("root", $_SERVER['DOCUMENT_ROOT']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
