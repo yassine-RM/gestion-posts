@@ -25,7 +25,7 @@
         <ul class="navbar-nav ml-auto nav-flex-icons avatar-nav">
             <li class="nav-item avatar dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img width="50" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" alt="avatar image">
+                    <img width="50" height="50" src="/assets/img/avatar.png" class="rounded-circle z-depth-0" alt="avatar image">
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-55">
                     <a class="dropdown-item" href="profile"><i class="fa fa-user"></i>
