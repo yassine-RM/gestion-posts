@@ -19,7 +19,7 @@ if (
         $newUser = new UserModel($firstName, $lastName, $adress,0, $email, $password);
         $state = UserCtr::register($newUser);
         if ($state) {
-            header('location:/gestion-posts');
+            header('location:/');
         }
         else
         $error='This email already exist ! ';

@@ -12,7 +12,7 @@ if (
         $user = UserCtr::login($email,$password);
         if ($user) {
             $_SESSION['userConnected']=$user;
-            header('location:/gestion-posts');
+            header('location:/');
         }
     else {
         $error = "Login or password incorrect !!!";
