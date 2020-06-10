@@ -4,7 +4,7 @@ namespace Models;
 use Db\DB;
 use \PDO;
 
-class User extends DB
+class User 
 {
 
   public $firstName;
@@ -16,8 +16,6 @@ class User extends DB
 
   public function __construct($firstName,$lastName,$adress,$status=0,$email="remmanidev@gmail.com",$password="123456")
   {
-    parent::__construct('gestion-posts','localhost','mysql','root', '');
-
     $this->firstName=$firstName;
     $this->lastName=$lastName;
     $this->adress=$adress;
@@ -28,13 +26,13 @@ class User extends DB
 
   public  static function all()
   {
-    $users =parent::connect()->query("SELECT * FROM USERS");
+    $users =DB::connect()->query("SELECT * FROM USERS");
     $data = $users->fetchAll(PDO::FETCH_OBJ);
     return $data;
   }
   public  static function count()
   {
-    $statement =parent::connect()->prepare("SELECT * FROM USERS");
+    $statement =DB::connect()->prepare("SELECT * FROM USERS");
    $statement->execute();
     $users =$statement->fetchAll(PDO::FETCH_OBJ);
     return count($users);
@@ -57,21 +55,21 @@ class User extends DB
    else {
       $query="SELECT * FROM USERS";
     }
-    $statement = parent::connect()->prepare($query);
+    $statement = DB::connect()->prepare($query);
     $statement->execute();
     $users=$statement->fetchAll(PDO::FETCH_OBJ);
     return $users;
   }
   public  static function find($email)
   {
-    $statement = parent::connect()->prepare("SELECT * FROM USERS WHERE email=:email");
+    $statement = DB::connect()->prepare("SELECT * FROM USERS WHERE email=:email");
     $statement->execute(array(':email'=>$email));
     $user=$statement->fetch(PDO::FETCH_OBJ);
     return $user;
   }
   public  static function login($email,$password)
   {
-    $statement = parent::connect()->prepare("SELECT * FROM USERS WHERE email=:email AND pwd=:pwd");
+    $statement = DB::connect()->prepare("SELECT * FROM USERS WHERE email=:email AND pwd=:pwd");
     $statement->execute(array(
       ':email'=>$email,
       ':pwd'=>$password,
@@ -83,7 +81,7 @@ class User extends DB
   {
     $getUser=static::find($user->email);
     if(!$getUser){
-    $statement = parent::connect()->prepare("INSERT INTO USERS (firstName,lastName,email,adress,pwd) VALUES (:firstName,:lastName,:email,:adress,:pwd)");
+    $statement = DB::connect()->prepare("INSERT INTO USERS (firstName,lastName,email,adress,pwd) VALUES (:firstName,:lastName,:email,:adress,:pwd)");
     $state=$statement->execute(
       array(
         ':firstName'=>$user->firstName,
@@ -99,13 +97,13 @@ class User extends DB
   }
   public  static function update($email,$user)
   {
-    $statement = parent::connect()->prepare("UPDATE USERS SET firstName=:firstName,lastName=:lastName,adress=:adress  WHERE email=:email");
+    $statement = DB::connect()->prepare("UPDATE USERS SET firstName=:firstName,lastName=:lastName,adress=:adress  WHERE email=:email");
     $state=$statement->execute(array(':email'=>$email,':firstName'=>$user->firstName,':lastName'=>$user->lastName,':adress'=>$user->adress));
     return $state;
   }
   public  static function delete($id)
   {
-    $statement = parent::connect()->prepare("DELETE  FROM USERS WHERE id=:userId");
+    $statement = DB::connect()->prepare("DELETE  FROM USERS WHERE id=:userId");
     $statement->bindParam(":userId",$id,PDO::PARAM_INT);
     $statement->execute();
     return $statement;
