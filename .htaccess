@@ -1,4 +1,4 @@
 Options All -Indexes
 RewriteEngine on
-RewriteBase "/gestion-posts/"
+RewriteBase "/"
 RewriteRule ^([-a-zA-Z0-9]+)$ index.php/?page=$1

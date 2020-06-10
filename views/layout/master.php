@@ -1,7 +1,7 @@
 <?php
 use Middleware\isAuthenticated;
 isAuthenticated::isAuth();
-define("root", $_SERVER['DOCUMENT_ROOT'] . "/gestion-posts");
+define("root", $_SERVER['DOCUMENT_ROOT']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,12 +9,12 @@ define("root", $_SERVER['DOCUMENT_ROOT'] . "/gestion-posts");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/gestion-posts/assets/css/style.css">
-    <link rel="stylesheet" href="/gestion-posts/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/gestion-posts/assets/js/jquery.js"></script>
-    <script src="/gestion-posts/assets/js/pooper.js"></script>
-    <script src="/gestion-posts/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/pooper.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
     
     <title>gestion-posts</title>
 </head>
