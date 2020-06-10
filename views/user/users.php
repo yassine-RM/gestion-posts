@@ -16,8 +16,6 @@ if (isset($_POST['subSearch'])) {
       $users= UserCtr::search($searchType,$searchText);
 
     }
-    $_POST['searchText']="";
-    $_POST['searchType']="";
 }
 else {
     $users = User::index();
