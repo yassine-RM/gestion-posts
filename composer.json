@@ -1,0 +1,12 @@
+{
+
+    "autoload": {
+        "psr-4": {
+            "Models\\": "models",
+            "Controllers\\": "controllers",
+            "Db\\": "database",
+            "Middleware\\": "middleware"
+        }
+    }
+  
+}

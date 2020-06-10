@@ -1,0 +1,54 @@
+body{
+    font-family: monospace !important;
+}
+.content{
+    min-height: 440px;
+}
+.avatar-nav{
+    cursor: pointer;
+}
+.footer{
+
+   padding:15px;
+   width: 100%;
+}
+.actions{
+    display: flex;
+}
+.icon{
+  font-size: 50px !important;
+  float: left;
+}
+.user-icon,
+.static-text.users
+{
+    color:  rgb(224, 131, 131);
+}
+.post-icon,
+.static-text.posts
+{
+    color:  rgb(55, 171, 175);
+}
+.cat-icon,
+.static-text.cats
+{
+    color:  rgb(210, 49, 216);
+}
+.static-text{
+    font-size: 28px;
+    text-align: center;
+}
+.statistic-card{
+width: 100%;
+height: 100px;
+background: rgb(255, 255, 255);
+}
+.statistic-card.users{
+    border-bottom: 3px solid rgb(224, 131, 131);
+}
+.statistic-card.posts{
+    border-bottom: 3px solid rgb(55, 171, 175);
+}
+.statistic-card.categories{
+    border-bottom: 3px solid rgb(210, 49, 216);
+}
