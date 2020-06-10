@@ -6,11 +6,10 @@ use \PDO;
 
 class DB
 {
-    private static $user;
-    private static $dsn ;
-    private static $password ;
+    private static $user="b3c58fb0c75aea";
+    private static $dsn='mysql:host=us-cdbr-east-05.cleardb.net;dbname=heroku_e930eb01e5fe951';
+    private static $password ="4acfa755";
     private static $cnx = null;
-
     public function __construct($dbname = 'heroku_e930eb01e5fe951', $host = 'us-cdbr-east-05.cleardb.net', $driver = 'mysql', $user = 'b3c58fb0c75aea', $password = '4acfa755')
     {
         $this->dsn = $driver . ':host=' . $host . ';dbname=' . $dbname;
